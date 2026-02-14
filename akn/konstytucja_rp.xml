@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <act name="konstytucja-rp-1997">
+    <meta>
+      <identification source="#sejm">
+        <FRBRWork>
+          <FRBRthis value="/akn/pl/act/1997-04-02/konstytucja/main"/>
+          <FRBRuri value="/akn/pl/act/1997-04-02/konstytucja"/>
+          <FRBRdate date="1997-04-02" name="enactment"/>
+          <FRBRauthor href="#zgromadzenie-narodowe"/>
+          <FRBRcountry value="pl"/>
+        </FRBRWork>
+        <FRBRExpression>
+          <FRBRthis value="/akn/pl/act/1997-04-02/konstytucja/pol@1997-10-17/main"/>
+          <FRBRuri value="/akn/pl/act/1997-04-02/konstytucja/pol@1997-10-17"/>
+          <FRBRdate date="1997-10-17" name="publication"/>
+          <FRBRauthor href="#sejm"/>
+          <FRBRlanguage language="pol"/>
+        </FRBRExpression>
+        <FRBRManifestation>
+          <FRBRthis value="/akn/pl/act/1997-04-02/konstytucja/pol@1997-10-17/main.xml"/>
+          <FRBRuri value="/akn/pl/act/1997-04-02/konstytucja/pol@1997-10-17.akn"/>
+          <FRBRdate date="2025-01-01" name="transform"/>
+          <FRBRauthor href="#law-as-code"/>
+        </FRBRManifestation>
+      </identification>
+      <publication date="1997-10-17" name="Dziennik Ustaw" number="78" showAs="Dz.U. 1997 nr 78 poz. 483"/>
+      <references source="#law-as-code">
+        <TLCOrganization eId="sejm" href="/akn/pl/ontology/organization/sejm" showAs="Sejm Rzeczypospolitej Polskiej"/>
+        <TLCOrganization eId="senat" href="/akn/pl/ontology/organization/senat" showAs="Senat Rzeczypospolitej Polskiej"/>
+        <TLCOrganization eId="zgromadzenie-narodowe" href="/akn/pl/ontology/organization/zgromadzenie-narodowe" showAs="Zgromadzenie Narodowe"/>
+        <TLCOrganization eId="law-as-code" href="https://github.com" showAs="law-as-code project"/>
+      </references>
+    </meta>
+
+    <preamble>
+      <p>Konstytucja Rzeczypospolitej Polskiej z dnia 2 kwietnia 1997 r.</p>
+      <p>Constitution of the Republic of Poland of 2nd April 1997</p>
+    </preamble>
+
+    <body>
+      <!-- ============================================================ -->
+      <!-- Chapter I: Rzeczpospolita / The Republic (Art. 1-29)         -->
+      <!-- ============================================================ -->
+      <chapter eId="chap_I">
+        <num>I</num>
+        <heading>Rzeczpospolita / The Republic</heading>
+
+        <article eId="art_1">
+          <num>Art. 1.</num>
+          <content>
+            <p>Rzeczpospolita Polska jest dobrem wspólnym wszystkich obywateli.</p>
+            <p xml:lang="en">The Republic of Poland shall be the common good of all its citizens.</p>
+          </content>
+        </article>
+
+        <article eId="art_2">
+          <num>Art. 2.</num>
+          <content>
+            <p>Rzeczpospolita Polska jest demokratycznym państwem prawnym, urzeczywistniającym zasady sprawiedliwości społecznej.</p>
+            <p xml:lang="en">The Republic of Poland shall be a democratic state ruled by law and implementing the principles of social justice.</p>
+          </content>
+        </article>
+
+        <article eId="art_4">
+          <num>Art. 4.</num>
+          <paragraph eId="art_4__para_1">
+            <num>1.</num>
+            <content><p>Władza zwierzchnia w Rzeczypospolitej Polskiej należy do Narodu.</p></content>
+          </paragraph>
+          <paragraph eId="art_4__para_2">
+            <num>2.</num>
+            <content><p>Naród sprawuje władzę przez swoich przedstawicieli lub bezpośrednio.</p></content>
+          </paragraph>
+        </article>
+
+        <article eId="art_8">
+          <num>Art. 8.</num>
+          <paragraph eId="art_8__para_1">
+            <num>1.</num>
+            <content><p>Konstytucja jest najwyższym prawem Rzeczypospolitej Polskiej.</p></content>
+          </paragraph>
+          <paragraph eId="art_8__para_2">
+            <num>2.</num>
+            <content><p>Przepisy Konstytucji stosuje się bezpośrednio, chyba że Konstytucja stanowi inaczej.</p></content>
+          </paragraph>
+        </article>
+
+        <article eId="art_10">
+          <num>Art. 10.</num>
+          <paragraph eId="art_10__para_1">
+            <num>1.</num>
+            <content>
+              <p>Ustrój Rzeczypospolitej Polskiej opiera się na podziale i równowadze władzy ustawodawczej, władzy wykonawczej i władzy sądowniczej.</p>
+              <p xml:lang="en">The system of government of the Republic of Poland shall be based on the separation of and balance between the legislative, executive and judicial powers.</p>
+            </content>
+          </paragraph>
+          <paragraph eId="art_10__para_2">
+            <num>2.</num>
+            <content>
+              <p>Władzę ustawodawczą sprawują Sejm i Senat, władzę wykonawczą Prezydent Rzeczypospolitej Polskiej i Rada Ministrów, a władzę sądowniczą sądy i trybunały.</p>
+            </content>
+          </paragraph>
+        </article>
+      </chapter>
+
+      <!-- ============================================================ -->
+      <!-- Chapter II: Wolności, prawa i obowiązki (Art. 30-86)         -->
+      <!-- ============================================================ -->
+      <chapter eId="chap_II">
+        <num>II</num>
+        <heading>Wolności, prawa i obowiązki człowieka i obywatela</heading>
+
+        <article eId="art_31">
+          <num>Art. 31.</num>
+          <paragraph eId="art_31__para_3">
+            <num>3.</num>
+            <content>
+              <p>Ograniczenia w zakresie korzystania z konstytucyjnych wolności i praw mogą być ustanawiane tylko w ustawie i tylko wtedy, gdy są konieczne w demokratycznym państwie dla jego bezpieczeństwa lub porządku publicznego, bądź dla ochrony środowiska, zdrowia i moralności publicznej, albo wolności i praw innych osób. Ograniczenia te nie mogą naruszać istoty wolności i praw.</p>
+              <p xml:lang="en">Any limitation upon the exercise of constitutional freedoms and rights may be imposed only by statute, and only when necessary in a democratic state for the protection of its security or public order, or to protect the natural environment, health or public morals, or the freedoms and rights of other persons. Such limitations shall not violate the essence of freedoms and rights.</p>
+            </content>
+          </paragraph>
+        </article>
+      </chapter>
+
+      <!-- ============================================================ -->
+      <!-- Chapter III: Źródła prawa / Sources of Law (Art. 87-94)      -->
+      <!-- ============================================================ -->
+      <chapter eId="chap_III">
+        <num>III</num>
+        <heading>Źródła prawa / Sources of Law</heading>
+
+        <article eId="art_87">
+          <num>Art. 87.</num>
+          <paragraph eId="art_87__para_1">
+            <num>1.</num>
+            <content>
+              <p>Źródłami powszechnie obowiązującego prawa Rzeczypospolitej Polskiej są: Konstytucja, ustawy, ratyfikowane umowy międzynarodowe oraz rozporządzenia.</p>
+              <p xml:lang="en">The sources of universally binding law of the Republic of Poland shall be: the Constitution, statutes, ratified international agreements, and regulations.</p>
+            </content>
+          </paragraph>
+          <paragraph eId="art_87__para_2">
+            <num>2.</num>
+            <content><p>Źródłami powszechnie obowiązującego prawa Rzeczypospolitej Polskiej są na obszarze działania organów, które je ustanowiły, akty prawa miejscowego.</p></content>
+          </paragraph>
+        </article>
+
+        <article eId="art_91">
+          <num>Art. 91.</num>
+          <paragraph eId="art_91__para_2">
+            <num>2.</num>
+            <content>
+              <p>Umowa międzynarodowa ratyfikowana za uprzednią zgodą wyrażoną w ustawie ma pierwszeństwo przed ustawą, jeżeli ustawy tej nie da się pogodzić z umową.</p>
+              <p xml:lang="en">An international agreement ratified upon prior consent granted by statute shall have precedence over statutes if such an agreement cannot be reconciled with the provisions of such statutes.</p>
+            </content>
+          </paragraph>
+        </article>
+      </chapter>
+
+      <!-- ============================================================ -->
+      <!-- Chapter IV: Sejm i Senat (Art. 95-125)                      -->
+      <!-- ============================================================ -->
+      <chapter eId="chap_IV">
+        <num>IV</num>
+        <heading>Sejm i Senat</heading>
+
+        <article eId="art_99">
+          <num>Art. 99.</num>
+          <paragraph eId="art_99__para_1">
+            <num>1.</num>
+            <content>
+              <p>Wybrany do Sejmu może być obywatel polski mający prawo wybierania, który najpóźniej w dniu wyborów kończy 21 lat.</p>
+              <p xml:lang="en">Every Polish citizen having the right to vote who has attained 21 years of age by the day of elections may be elected to the Sejm.</p>
+            </content>
+          </paragraph>
+          <paragraph eId="art_99__para_2">
+            <num>2.</num>
+            <content>
+              <p>Wybrany do Senatu może być obywatel polski mający prawo wybierania, który najpóźniej w dniu wyborów kończy 30 lat.</p>
+              <p xml:lang="en">Every Polish citizen having the right to vote who has attained 30 years of age by the day of elections may be elected to the Senate.</p>
+            </content>
+          </paragraph>
+        </article>
+
+        <article eId="art_120">
+          <num>Art. 120.</num>
+          <content>
+            <p>Sejm uchwala ustawy zwykłą większością głosów w obecności co najmniej połowy ustawowej liczby posłów, chyba że Konstytucja przewiduje inną większość.</p>
+            <p xml:lang="en">The Sejm shall pass bills by a simple majority vote, in the presence of at least half the statutory number of Deputies, unless the Constitution provides otherwise.</p>
+          </content>
+        </article>
+
+        <article eId="art_121">
+          <num>Art. 121.</num>
+          <paragraph eId="art_121__para_3">
+            <num>3.</num>
+            <content>
+              <p>Uchwałę Senatu odrzucającą ustawę albo poprawkę zaproponowaną w uchwale Senatu uważa się za przyjętą, jeżeli Sejm nie odrzuci jej bezwzględną większością głosów w obecności co najmniej połowy ustawowej liczby posłów.</p>
+            </content>
+          </paragraph>
+        </article>
+
+        <article eId="art_122">
+          <num>Art. 122.</num>
+          <paragraph eId="art_122__para_2">
+            <num>2.</num>
+            <content><p>Prezydent Rzeczypospolitej podpisuje ustawę w ciągu 21 dni od dnia przedstawienia i zarządza jej ogłoszenie w Dzienniku Ustaw Rzeczypospolitej Polskiej.</p></content>
+          </paragraph>
+          <paragraph eId="art_122__para_5">
+            <num>5.</num>
+            <content>
+              <p>Jeżeli Prezydent Rzeczypospolitej nie wystąpił z wnioskiem do Trybunału Konstytucyjnego w trybie ust. 3, może z umotywowanym wnioskiem przekazać ustawę Sejmowi do ponownego rozpatrzenia. Po ponownym uchwaleniu ustawy przez Sejm większością 3/5 głosów w obecności co najmniej połowy ustawowej liczby posłów Prezydent Rzeczypospolitej w ciągu 7 dni podpisuje ustawę i zarządza jej ogłoszenie w Dzienniku Ustaw Rzeczypospolitej Polskiej.</p>
+              <p xml:lang="en">If the President has not made a referral to the Constitutional Tribunal, he may refer the bill to the Sejm for reconsideration. After re-passage by the Sejm by a three-fifths majority vote in the presence of at least half the statutory number of Deputies, the President shall sign the bill within 7 days.</p>
+            </content>
+          </paragraph>
+        </article>
+      </chapter>
+
+      <!-- ============================================================ -->
+      <!-- Chapter V: Prezydent RP (Art. 126-145)                       -->
+      <!-- ============================================================ -->
+      <chapter eId="chap_V">
+        <num>V</num>
+        <heading>Prezydent Rzeczypospolitej Polskiej</heading>
+
+        <article eId="art_127">
+          <num>Art. 127.</num>
+          <paragraph eId="art_127__para_3">
+            <num>3.</num>
+            <content>
+              <p>Na Prezydenta Rzeczypospolitej może być wybrany obywatel polski, który najpóźniej w dniu wyborów kończy 35 lat i korzysta z pełni praw wyborczych do Sejmu. Kandydata zgłasza co najmniej 100 000 obywateli mających prawo wybierania do Sejmu.</p>
+              <p xml:lang="en">Any Polish citizen who has attained 35 years of age and has full electoral rights to the Sejm may be elected President. A candidate shall be nominated by at least 100,000 citizens having the right to vote in Sejm elections.</p>
+            </content>
+          </paragraph>
+        </article>
+      </chapter>
+
+      <!-- ============================================================ -->
+      <!-- Chapter X: Finanse publiczne (Art. 216-227)                  -->
+      <!-- ============================================================ -->
+      <chapter eId="chap_X">
+        <num>X</num>
+        <heading>Finanse publiczne / Public Finances</heading>
+
+        <article eId="art_216">
+          <num>Art. 216.</num>
+          <paragraph eId="art_216__para_5">
+            <num>5.</num>
+            <content>
+              <p>Nie wolno zaciągać pożyczek lub udzielać gwarancji i poręczeń finansowych, w następstwie których państwowy dług publiczny przekroczy 3/5 wartości rocznego produktu krajowego brutto. Sposób obliczania wartości rocznego produktu krajowego brutto oraz państwowego długu publicznego określa ustawa.</p>
+              <p xml:lang="en">It shall not be permissible to contract loans or provide guarantees and financial sureties which would engender a national public debt exceeding three-fifths of the value of the annual gross domestic product.</p>
+            </content>
+          </paragraph>
+        </article>
+      </chapter>
+
+      <!-- ============================================================ -->
+      <!-- Chapter XI: Stany nadzwyczajne (Art. 228-234)                -->
+      <!-- ============================================================ -->
+      <chapter eId="chap_XI">
+        <num>XI</num>
+        <heading>Stany nadzwyczajne / Extraordinary Measures</heading>
+
+        <article eId="art_228">
+          <num>Art. 228.</num>
+          <paragraph eId="art_228__para_1">
+            <num>1.</num>
+            <content>
+              <p>W sytuacjach szczególnych zagrożeń, jeżeli zwykłe środki konstytucyjne są niewystarczające, może zostać wprowadzony odpowiedni stan nadzwyczajny: stan wojenny, stan wyjątkowy lub stan klęski żywiołowej.</p>
+            </content>
+          </paragraph>
+          <paragraph eId="art_228__para_7">
+            <num>7.</num>
+            <content>
+              <p>W czasie stanu nadzwyczajnego oraz w ciągu 90 dni po jego zakończeniu nie mogą być przeprowadzane wybory do Sejmu, Senatu, organów samorządu terytorialnego oraz wybory Prezydenta Rzeczypospolitej.</p>
+              <p xml:lang="en">During extraordinary measures and within 90 days following their termination, elections to the Sejm, Senate, local government organs, and elections for the President shall not be held.</p>
+            </content>
+          </paragraph>
+        </article>
+
+        <article eId="art_230">
+          <num>Art. 230.</num>
+          <paragraph eId="art_230__para_1">
+            <num>1.</num>
+            <content>
+              <p>W razie zagrożenia konstytucyjnego ustroju państwa, bezpieczeństwa obywateli lub porządku publicznego, Prezydent Rzeczypospolitej na wniosek Rady Ministrów może wprowadzić, na czas oznaczony, nie dłuższy niż 90 dni, stan wyjątkowy na części albo na całym terytorium państwa.</p>
+            </content>
+          </paragraph>
+        </article>
+
+        <article eId="art_232">
+          <num>Art. 232.</num>
+          <content>
+            <p>W celu zapobieżenia skutkom katastrof naturalnych lub awarii technicznych noszących znamiona klęski żywiołowej oraz w celu ich usunięcia Rada Ministrów może wprowadzić na czas oznaczony, nie dłuższy niż 30 dni, stan klęski żywiołowej na części albo na całym terytorium państwa.</p>
+          </content>
+        </article>
+      </chapter>
+
+      <!-- ============================================================ -->
+      <!-- Chapter XII: Zmiana Konstytucji (Art. 235)                   -->
+      <!-- ============================================================ -->
+      <chapter eId="chap_XII">
+        <num>XII</num>
+        <heading>Zmiana Konstytucji / Amending the Constitution</heading>
+
+        <article eId="art_235">
+          <num>Art. 235.</num>
+          <paragraph eId="art_235__para_1">
+            <num>1.</num>
+            <content><p>Projekt ustawy o zmianie Konstytucji może przedłożyć co najmniej 1/5 ustawowej liczby posłów, Senat lub Prezydent Rzeczypospolitej.</p></content>
+          </paragraph>
+          <paragraph eId="art_235__para_2">
+            <num>2.</num>
+            <content><p>Zmiana Konstytucji następuje w drodze ustawy uchwalonej w jednakowym brzmieniu przez Sejm i następnie w terminie nie dłuższym niż 60 dni przez Senat.</p></content>
+          </paragraph>
+          <paragraph eId="art_235__para_3">
+            <num>3.</num>
+            <content><p>Pierwsze czytanie projektu ustawy o zmianie Konstytucji może odbyć się nie wcześniej niż trzydziestego dnia od dnia przedłożenia Sejmowi projektu ustawy.</p></content>
+          </paragraph>
+          <paragraph eId="art_235__para_4">
+            <num>4.</num>
+            <content><p>Ustawę o zmianie Konstytucji uchwala Sejm większością co najmniej 2/3 głosów w obecności co najmniej połowy ustawowej liczby posłów oraz Senat bezwzględną większością głosów w obecności co najmniej połowy ustawowej liczby senatorów.</p></content>
+          </paragraph>
+          <paragraph eId="art_235__para_6">
+            <num>6.</num>
+            <content>
+              <p>Jeżeli ustawa o zmianie Konstytucji dotyczy przepisów rozdziału I, II lub XII, podmioty określone w ust. 1 mogą zażądać, w terminie 45 dni od dnia uchwalenia ustawy przez Senat, przeprowadzenia referendum zatwierdzającego.</p>
+              <p xml:lang="en">If the bill to amend the Constitution concerns the provisions of Chapters I, II or XII, the subjects referred to in para. 1 may request, within 45 days of the adoption of the bill by the Senate, the holding of a confirmatory referendum.</p>
+            </content>
+          </paragraph>
+          <paragraph eId="art_235__para_7">
+            <num>7.</num>
+            <content><p>Prezydent Rzeczypospolitej podpisuje ustawę w ciągu 21 dni od dnia przedstawienia i zarządza jej ogłoszenie w Dzienniku Ustaw Rzeczypospolitej Polskiej.</p></content>
+          </paragraph>
+        </article>
+      </chapter>
+    </body>
+  </act>
+</akomaNtoso>

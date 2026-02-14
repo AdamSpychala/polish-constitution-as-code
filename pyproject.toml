@@ -1,0 +1,49 @@
+[project]
+name = "konstytucja"
+version = "0.1.0"
+description = "Polish Constitution (Konstytucja RP 1997) encoded as executable Python"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+authors = [{ name = "Adam Spychała" }]
+keywords = ["constitution", "law", "poland", "konstytucja", "law-as-code"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Education",
+    "Intended Audience :: Legal Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Education",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Repository = "https://github.com/adamspychala/law-as-code"
+Issues = "https://github.com/adamspychala/law-as-code/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/konstytucja"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = ["pytest>=8.0", "ruff>=0.8", "mypy>=1.13"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+ignore = ["RUF002", "RUF003"]  # allow en-dashes in article ranges (e.g., "Art. 1–29")
+
+[tool.mypy]
+strict = true
+python_version = "3.12"
