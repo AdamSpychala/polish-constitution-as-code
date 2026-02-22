@@ -157,3 +157,11 @@ class TribunalError(ConstitutionalError):
 
     Art. 188–197.
     """
+
+
+class ExtraditionError(ConstitutionalError):
+    """Naruszenie zasad ekstradycji — extradition rule violation.
+
+    Art. 55 [zmieniony nowelizacją z 8 września 2006 r.].
+    Art. 55 [amended 8 September 2006].
+    """
