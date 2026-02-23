@@ -44,8 +44,16 @@ class TestSejmEligibility:
             check_sejm_eligibility(foreign_citizen, election_date)
 
     def test_criminal_record(self, convicted_citizen, election_date):
-        with pytest.raises(EligibilityError, match="criminal record"):
+        with pytest.raises(EligibilityError, match="intentional crime"):
             check_sejm_eligibility(convicted_citizen, election_date)
+
+    def test_criminal_record_references_2009_amendment(self, convicted_citizen, election_date):
+        """Art. 99(3) [nowelizacja 2009]: error message cites the amendment."""
+        with pytest.raises(EligibilityError) as exc_info:
+            check_sejm_eligibility(convicted_citizen, election_date)
+        msg = str(exc_info.value)
+        assert "nowelizacja 2009" in msg
+        assert "ex officio" in msg
 
     def test_exactly_21_on_election_day(self):
         citizen = Citizen(
@@ -79,6 +87,15 @@ class TestSenateEligibility:
         )
         with pytest.raises(EligibilityError, match="at least 30"):
             check_senate_eligibility(citizen, date(2025, 10, 15))
+
+    def test_non_citizen(self, foreign_citizen, election_date):
+        with pytest.raises(EligibilityError, match="Polish citizen"):
+            check_senate_eligibility(foreign_citizen, election_date)
+
+    def test_criminal_record(self, convicted_citizen, election_date):
+        """Art. 99(3) [nowelizacja 2009]: Senate candidate cannot have criminal record."""
+        with pytest.raises(EligibilityError, match="intentional crime"):
+            check_senate_eligibility(convicted_citizen, election_date)
 
     def test_exactly_30(self):
         citizen = Citizen(

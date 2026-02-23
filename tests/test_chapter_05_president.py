@@ -39,7 +39,7 @@ class TestPresidentialEligibility:
             )
 
     def test_criminal_record(self, convicted_citizen, election_date):
-        with pytest.raises(EligibilityError, match="criminal record"):
+        with pytest.raises(EligibilityError, match="intentional crime"):
             check_presidential_eligibility(
                 convicted_citizen, election_date, signatures=100_000,
             )
@@ -77,7 +77,7 @@ class TestPresidentialEligibility:
         msg = str(exc_info.value)
         assert "Polish citizen" in msg
         assert "at least 35" in msg
-        assert "criminal record" in msg
+        assert "intentional crime" in msg
         assert "signatures" in msg
 
 

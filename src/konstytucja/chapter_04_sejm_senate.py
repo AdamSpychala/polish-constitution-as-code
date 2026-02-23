@@ -80,7 +80,7 @@ A Deputy's mandate may not be held jointly with the above offices.
 
 
 def check_sejm_eligibility(citizen: Citizen, election_date: date) -> bool:
-    """Verify eligibility for the Sejm (Art. 99 ust. 1).
+    """Verify eligibility for the Sejm (Art. 99 ust. 1, 3).
 
     Art. 99 ust. 1: Wybrany do Sejmu może być obywatel polski mający prawo
     wybierania, który najpóźniej w dniu wyborów kończy 21 lat.
@@ -88,10 +88,20 @@ def check_sejm_eligibility(citizen: Citizen, election_date: date) -> bool:
     Art. 99(1): Every Polish citizen having the right to vote who has attained
     21 years of age by the day of elections may be elected to the Sejm.
 
+    Art. 99 ust. 3 [dodany nowelizacją z 7 maja 2009 r., Dz.U. 2009 nr 114
+    poz. 946]: Wybraną do Sejmu lub do Senatu nie może być osoba skazana
+    prawomocnym wyrokiem na karę pozbawienia wolności za przestępstwo umyślne
+    ścigane z oskarżenia publicznego.
+
+    Art. 99(3) [added by amendment of 7 May 2009]: A person sentenced to
+    imprisonment by a final judgment for an intentional crime prosecuted
+    ex officio may not be elected to the Sejm or the Senate.
+
     Conditions:
     - Polish citizen
     - At least 21 years old on election day
-    - No criminal record (Art. 99 ust. 3 — sentenced by final judgment)
+    - No criminal conviction for intentional crime prosecuted ex officio
+      (Art. 99(3), 2009 amendment)
     """
     errors: list[str] = []
 
@@ -100,7 +110,10 @@ def check_sejm_eligibility(citizen: Citizen, election_date: date) -> bool:
     if citizen.age_at(election_date) < 21:
         errors.append(f"must be at least 21 (is {citizen.age_at(election_date)})")
     if citizen.criminal_record:
-        errors.append("has a criminal record (prawomocny wyrok)")
+        errors.append(
+            "convicted by final judgment for an intentional crime prosecuted "
+            "ex officio (Art. 99(3), nowelizacja 2009)"
+        )
 
     if errors:
         raise EligibilityError(
@@ -111,13 +124,20 @@ def check_sejm_eligibility(citizen: Citizen, election_date: date) -> bool:
 
 
 def check_senate_eligibility(citizen: Citizen, election_date: date) -> bool:
-    """Verify eligibility for the Senate (Art. 99 ust. 2).
+    """Verify eligibility for the Senate (Art. 99 ust. 2, 3).
 
     Art. 99 ust. 2: Wybrany do Senatu może być obywatel polski mający prawo
     wybierania, który najpóźniej w dniu wyborów kończy 30 lat.
 
     Art. 99(2): Every Polish citizen having the right to vote who has attained
     30 years of age by the day of elections may be elected to the Senate.
+
+    Art. 99 ust. 3 [dodany nowelizacją z 7 maja 2009 r.]: see
+    check_sejm_eligibility docstring for full text.
+
+    Art. 99(3) [added by amendment of 7 May 2009]: A person sentenced to
+    imprisonment by a final judgment for an intentional crime prosecuted
+    ex officio may not be elected to the Sejm or the Senate.
     """
     errors: list[str] = []
 
@@ -126,7 +146,10 @@ def check_senate_eligibility(citizen: Citizen, election_date: date) -> bool:
     if citizen.age_at(election_date) < 30:
         errors.append(f"must be at least 30 (is {citizen.age_at(election_date)})")
     if citizen.criminal_record:
-        errors.append("has a criminal record (prawomocny wyrok)")
+        errors.append(
+            "convicted by final judgment for an intentional crime prosecuted "
+            "ex officio (Art. 99(3), nowelizacja 2009)"
+        )
 
     if errors:
         raise EligibilityError(

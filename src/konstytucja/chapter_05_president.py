@@ -54,10 +54,14 @@ def check_presidential_eligibility(
     A candidate shall be nominated by at least 100,000 citizens having
     the right to vote in Sejm elections.
 
+    Note: "full electoral rights to the Sejm" implies Art. 99(3)
+    [nowelizacja 2009] — a person convicted by final judgment for an
+    intentional crime prosecuted ex officio lacks full electoral rights.
+
     Conditions:
     - Polish citizen
     - At least 35 years old on election day
-    - No criminal record
+    - Full electoral rights (no Art. 99(3) disqualification)
     - At least 100,000 supporting signatures
     """
     errors: list[str] = []
@@ -67,7 +71,10 @@ def check_presidential_eligibility(
     if citizen.age_at(election_date) < 35:
         errors.append(f"must be at least 35 (is {citizen.age_at(election_date)})")
     if citizen.criminal_record:
-        errors.append("has a criminal record (prawomocny wyrok)")
+        errors.append(
+            "lacks full electoral rights: convicted by final judgment for an "
+            "intentional crime prosecuted ex officio (Art. 99(3), nowelizacja 2009)"
+        )
     if signatures < MIN_SIGNATURES:
         errors.append(
             f"needs at least {MIN_SIGNATURES:,} signatures (has {signatures:,})"

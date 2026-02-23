@@ -2,7 +2,7 @@
 
 The Polish Constitution of 1997 (Konstytucja Rzeczypospolitej Polskiej) encoded as executable Python. Every constitutional rule — eligibility thresholds, voting majorities, legislative procedures, judicial independence, emergency powers, fiscal limits — becomes a function you can call, a constraint you can test, and a violation that raises a named exception citing the exact article.
 
-411 tests. 12 chapters. Zero external dependencies.
+429 tests. 12 chapters. 2 amendments. Zero external dependencies.
 
 Based on the [official text](https://www.sejm.gov.pl/prawo/konst/polski/kon1.htm) published by the Sejm of the Republic of Poland.
 
@@ -23,7 +23,7 @@ The executable form also catches ambiguities. When you have to write `votes_for 
 
 ```bash
 uv sync                          # install dependencies
-uv run pytest -v                 # run all 411 tests
+uv run pytest -v                 # run all 429 tests
 uv run python examples/demo.py  # run 19 interactive scenarios
 ```
 
@@ -139,7 +139,7 @@ check_emergency_rights_restriction(50, EmergencyType.MARTIAL_LAW)  # True — ho
 | Chapter | Articles | Module | What it encodes |
 |---------|----------|--------|----------------|
 | I | Art. 1–29 | `chapter_01_republic` | Republic principles, separation of powers (legislative/executive/judicial), mapping of state organs to branches |
-| II | Art. 30–86 | `chapter_02_rights` | Proportionality test for rights restrictions — 5 cumulative conditions from Art. 31(3): by statute, necessary in a democratic state, legitimate aim, proportionate, preserves essence |
+| II | Art. 30–86 | `chapter_02_rights` | Proportionality test for rights restrictions — 5 cumulative conditions from Art. 31(3): by statute, necessary in a democratic state, legitimate aim, proportionate, preserves essence. Extradition rules (Art. 55, as amended 2006) — 5-paragraph framework: default prohibition for Polish citizens, EAW/treaty exceptions, ICC exception for genocide/war crimes, absolute ban for political offences, court admissibility |
 | III | Art. 87–94 | `chapter_03_sources_of_law` | Legal hierarchy (Constitution > statute > ratified treaty > regulation > local act), conflict resolution per Art. 91(2) |
 | IV | Art. 95–125 | `chapter_04_sejm_senate` | Sejm (460 deputies, age ≥21) and Senate (100 senators, age ≥30) eligibility, bill passage with quorum, Senate override by absolute majority, incompatibilitas (Art. 103 — 14 incompatible offices), parliamentary immunity (Art. 105), national referendum with 50% turnout binding threshold (Art. 125) |
 | V | Art. 126–145 | `chapter_05_president` | Presidential eligibility (age ≥35, 100K signatures), 5-year term with 2-term limit (Art. 127(2)), bill signing, veto (overridden by 3/5 Sejm majority) |
@@ -158,7 +158,7 @@ check_emergency_rights_restriction(50, EmergencyType.MARTIAL_LAW)  # True — ho
 | `legislative_process` | Complete bill lifecycle state machine (Art. 118–122) with 17 stages: Sejm deliberation, Senate review (accept/amend/reject), presidential review (sign/veto/refer to tribunal), partial unconstitutionality handling, veto override, full audit trail |
 | `common/voting` | Quorum checks (half of statutory members), 4 majority types (simple, absolute, 2/3, 3/5), all using integer arithmetic |
 | `common/types` | 13 enums, 11 frozen dataclasses — the full domain model |
-| `common/errors` | 21 typed exception classes, every one carrying an `article` field referencing the violated provision |
+| `common/errors` | 22 typed exception classes, every one carrying an `article` field referencing the violated provision |
 | `akn/konstytucja_rp.xml` | Akoma Ntoso 3.0 XML — machine-readable document structure with bilingual Polish/English text, cross-referenceable with the executable code |
 
 ### Error System
@@ -167,7 +167,8 @@ Every constitutional violation raises a specific, typed exception:
 
 ```python
 from konstytucja.common.errors import (
-    EligibilityError,        # Art. 99, 127 — age, citizenship, criminal record
+    EligibilityError,        # Art. 99, 127 — age, citizenship, Art. 99(3) criminal record [2009 amendment]
+    ExtraditionError,        # Art. 55 [2006 amendment] — extradition rules
     QuorumError,             # Art. 120 — insufficient members present
     MajorityError,           # various — required majority not reached
     DebtCeilingError,        # Art. 216 — public debt exceeds 3/5 of GDP
@@ -179,7 +180,7 @@ from konstytucja.common.errors import (
     JudicialError,           # Art. 173–187 — judicial independence violation
     LegislativeProcessError, # Art. 118–122 — invalid state transition
     AmendmentError,          # Art. 235 — amendment procedure violation
-    # ... and 9 more
+    # ... and 10 more
 )
 ```
 
@@ -218,7 +219,7 @@ law-as-code/
 │   └── legislative_process.py             # Art. 118–122
 ├── akn/
 │   └── konstytucja_rp.xml    # Akoma Ntoso XML (bilingual)
-├── tests/                     # 411 pytest tests, one file per module
+├── tests/                     # 426 pytest tests, one file per module
 ├── examples/
 │   └── demo.py               # 19 runnable scenarios
 └── pyproject.toml
@@ -362,7 +363,7 @@ The `common/voting.py` module (quorum checks, majority types) is reusable for an
 ## Known Limitations
 
 - **Timing not enforced.** Deadlines (30-day first reading delay, Senate's 60-day window, President's 21-day signing period) are documented in docstrings but not enforced by the state machines. Callers are responsible for timing checks.
-- **1997 original text.** The code encodes the 1997 Constitution as originally adopted. Subsequent amendments (e.g., the 2018 change of local government terms from 4 to 5 years) are not yet reflected.
+- **Amendments included through 2009.** The code reflects the Constitution as amended by both enacted nowelizacje: the 2006 amendment to Art. 55 (European Arrest Warrant / extradition rules) and the 2009 amendment adding Art. 99(3) (electoral eligibility restriction for persons convicted of intentional crimes). These are the only two amendments to the 1997 Constitution as of 2026.
 - **Interpretive choices.** Where the constitutional text is ambiguous, the code makes a specific choice (documented in the relevant docstring). These choices follow mainstream constitutional scholarship but are not authoritative legal opinions.
 
 ## Contributing

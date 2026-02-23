@@ -153,7 +153,9 @@ class Citizen:
     name: str
     date_of_birth: date
     polish_citizen: bool = True
-    criminal_record: bool = False  # prawomocny wyrok za przestępstwo umyślne
+    # Art. 99(3) [nowelizacja 2009]: prawomocny wyrok za przestępstwo
+    # umyślne ścigane z oskarżenia publicznego
+    criminal_record: bool = False
 
     @property
     def age_on(self) -> _AgeLookup:
