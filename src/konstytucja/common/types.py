@@ -321,3 +321,27 @@ class OversightAppointment:
     name: str
     sejm_approved: bool = False
     senate_approved: bool = False
+
+
+@dataclass(frozen=True)
+class ExtraditionRequest:
+    """Wniosek o ekstradycję / Extradition request (Art. 55).
+
+    Art. 55 [zmieniony nowelizacją z 8 września 2006 r.]:
+    Ekstradycja obywatela polskiego jest zakazana, z wyjątkiem przypadków
+    określonych w ust. 2 i 3.
+
+    Art. 55 [amended 8 September 2006]:
+    Extradition of a Polish citizen is prohibited, except as specified
+    in paragraphs 2 and 3.
+    """
+    subject_is_polish_citizen: bool
+    requesting_state_or_body: str
+    based_on_ratified_treaty: bool = False       # Art. 55(2): treaty/EU law basis
+    international_judicial_body: bool = False     # Art. 55(3): ICC/international tribunal
+    act_committed_abroad: bool = False            # Art. 55(2)(1): outside Polish territory
+    double_criminality: bool = False              # Art. 55(2)(2): crime under both laws
+    political_nonviolent_offense: bool = False    # Art. 55(4): political crime without violence
+    violates_human_rights: bool = False           # Art. 55(4): would violate rights
+    court_approved: bool = False                  # Art. 55(5): court has ruled admissible
+    genocide_or_war_crime: bool = False           # Art. 55(3): genocide/war crimes/aggression

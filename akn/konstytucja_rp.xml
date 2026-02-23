@@ -121,6 +121,46 @@
             </content>
           </paragraph>
         </article>
+
+        <!-- Art. 55 [zmieniony ustawą z 8 września 2006 r., Dz.U. 2006 nr 200 poz. 1471] -->
+        <article eId="art_55">
+          <num>Art. 55.</num>
+          <paragraph eId="art_55__para_1">
+            <num>1.</num>
+            <content>
+              <p>Ekstradycja obywatela polskiego jest zakazana, z wyjątkiem przypadków określonych w ust. 2 i 3.</p>
+              <p xml:lang="en">Extradition of a Polish citizen is prohibited, except as specified in paragraphs 2 and 3.</p>
+            </content>
+          </paragraph>
+          <paragraph eId="art_55__para_2">
+            <num>2.</num>
+            <content>
+              <p>Ekstradycja obywatela polskiego może być dokonana na wniosek innego państwa lub sądowego organu międzynarodowego, jeżeli możliwość taka wynika z ratyfikowanej przez Rzeczpospolitą Polską umowy międzynarodowej lub ustawy wykonującej akt prawa stanowiony przez organizację międzynarodową, której Rzeczpospolita Polska jest członkiem, pod warunkiem że czyn objęty wnioskiem o ekstradycję: 1) został popełniony poza terytorium Rzeczypospolitej Polskiej, oraz 2) stanowił przestępstwo według prawa Rzeczypospolitej Polskiej lub stanowiłby przestępstwo według prawa Rzeczypospolitej Polskiej w razie popełnienia na terytorium Rzeczypospolitej Polskiej, zarówno w czasie jego popełnienia, jak i w chwili złożenia wniosku.</p>
+              <p xml:lang="en">Extradition of a Polish citizen may be granted upon request of a foreign state or international judicial body, if such possibility stems from a ratified international treaty or a statute implementing a legal instrument of an international organization of which Poland is a member, provided that the act covered by the request: 1) was committed outside the territory of Poland, and 2) constituted an offence under Polish law or would have constituted an offence under Polish law if committed in Poland, both at the time of commission and at the time the request is made.</p>
+            </content>
+          </paragraph>
+          <paragraph eId="art_55__para_3">
+            <num>3.</num>
+            <content>
+              <p>Nie wymaga spełnienia warunków określonych w ust. 2 pkt 1 i 2 ekstradycja mająca nastąpić na wniosek sądowego organu międzynarodowego powołanego na podstawie ratyfikowanej przez Rzeczpospolitą Polską umowy międzynarodowej, w związku z objętą jurysdykcją tego organu zbrodnią ludobójstwa, zbrodnią przeciwko ludzkości, zbrodnią wojenną lub zbrodnią agresji.</p>
+              <p xml:lang="en">The conditions of paragraph 2(1) and 2(2) are not required for extradition upon request of an international judicial body established under a ratified international treaty, in connection with genocide, crimes against humanity, war crimes, or crimes of aggression within its jurisdiction.</p>
+            </content>
+          </paragraph>
+          <paragraph eId="art_55__para_4">
+            <num>4.</num>
+            <content>
+              <p>Ekstradycja jest zakazana, jeżeli dotyczy osoby podejrzanej o popełnienie bez użycia przemocy przestępstwa z przyczyn politycznych lub jeżeli jej dokonanie będzie naruszać wolności i prawa człowieka i obywatela.</p>
+              <p xml:lang="en">Extradition is prohibited if it concerns a person suspected of committing, without use of force, an offence for political reasons, or if granting it would violate human rights and freedoms.</p>
+            </content>
+          </paragraph>
+          <paragraph eId="art_55__para_5">
+            <num>5.</num>
+            <content>
+              <p>W sprawie dopuszczalności ekstradycji orzeka sąd.</p>
+              <p xml:lang="en">The court shall decide on the admissibility of extradition.</p>
+            </content>
+          </paragraph>
+        </article>
       </chapter>
 
       <!-- ============================================================ -->
